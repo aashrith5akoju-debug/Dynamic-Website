@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+}
+
+/* Container */
+.container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#themeToggle {
+  background: #eee;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Input */
+.input-box {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+}
+
+#saveTodoButton {
+  background: green;
+}
+
+/* Todo list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.todo-item {
+  background: #f1f1f1;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  animation: slideIn 0.3s ease;
+}
+
+.label {
+  margin-left: 10px;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete-btn {
+  background: red;
+  padding: 5px 8px;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.todo-item:hover {
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+
+/* 🌙 DARK MODE */
+.dark {
+  background: #121212;
+}
+
+.dark .container {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark input {
+  background: #333;
+  color: white;
+}
+
+.dark .todo-item {
+  background: #2a2a2a;
+}
+
+.dark button {
+  background: #444;
+}
+
+.dark #saveTodoButton {
+  background: darkgreen;
+}
